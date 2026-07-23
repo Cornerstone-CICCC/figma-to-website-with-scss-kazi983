@@ -3,48 +3,50 @@
 // Color
 $colors: (
   'bg-base': #f9f9fb,
-  'bg-light-blue': #def0f9,
-  'bg-light-dark': #cecece,
+  'bg-light-blue': #edf0f9,
+  'bg-light-black': #cecece,
   'bg-dark': #3d3d3d,
 
   'accent': #3190e8,
 
   'font-base': #000000,
   'font-accent': #ffffff,
-
-  'border': #000000,
 );
 
 // Shadow
 $shadow-light: 0 4px 4px 0 #00000040;
 $shadow-dark: 0 4px 4px 0 #000000;
 
-// $main-color: map.get($colors, main);
+// Border
+$border-base: 1px solid #000000;
+$border-thick: 3px solid #000000;
 
 // Font sizes
 $font-sizes: (
   'xs': 0.75rem,
   'sm': 0.875rem,
-  'base': 1rem,
-  'lg': 1.125rem,
-  'xl': 1.25rem,
-  '2xl': 2.5rem,
+  'base': 1.6rem,
+  'lg': 2rem,
+  'xl': 2.5rem,
+  '2xl': 4rem,
   '3xl': 4.5rem,
-  '4xl': 8rem,
+  '4xl': 5.2rem,
   '5xl': 7rem,
   '6xl': 12rem,
 );
 
 // Spacing
 $spacing: (
+  '3xs': 0.1rem,
   '2xs': 0.2rem,
   'xs': 0.4rem,
   'sm': 0.8rem,
   'md': 1.6rem,
   'lg': 2.5rem,
   'xl': 5rem,
-  '2xl': 8rem,
-  '3xl': 12rem,
+  '2xl': 6rem,
+  '3xl': 8rem,
+  '4xl': 12rem,
 );
 
 // Border radius

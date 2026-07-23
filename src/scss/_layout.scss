@@ -1,11 +1,46 @@
 @use 'variables' as *;
 @use 'sass:map';
 
+// Section
+.section__main {
+  width: 100%;
+  min-height: 100vh;
+
+  padding-block: map-get($map: $spacing, $key: '4xl');
+  padding-inline: map-get($map: $spacing, $key: '2xl');
+  // paddingは要素の内側の余白
+  // margin はsectionと外側との距離 -> sectionタグにmarginがついてるのは変。
+}
+
+// Highlight
+:has(> .highlight) {
+  position: relative;
+  z-index: 0;
+}
+.highlight {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  color: map-get($map: $colors, $key: 'font-accent');
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -1%;
+    top: 0;
+    width: 110%;
+    height: 85%;
+    background-color: map-get($map: $colors, $key: 'accent');
+    z-index: -1;
+  }
+}
+
+// Header
 .header {
   position: absolute;
   width: 100%;
 
-  padding-right: map.get($spacing, '2xl');
+  padding-right: map.get($map: $spacing, $key: '2xl');
   height: $header-height;
   display: flex;
   justify-content: space-between;
@@ -20,7 +55,7 @@
   }
 
   &__nav {
-    font-size: map-get($map: $font-sizes, $key: '2xl');
+    font-size: map-get($map: $font-sizes, $key: 'xl');
 
     ul {
       width: 100%;
@@ -30,9 +65,7 @@
     }
 
     &__my-uxspace {
-      border-color: map-get($map: $colors, $key: 'border');
-      border-style: solid;
-      border-width: 1px;
+      border: $border-base;
       box-shadow: $shadow-light;
       background-color: white;
     }
@@ -44,11 +77,7 @@
   }
 }
 
-.section__main {
-  width: 100%;
-  min-height: 100vh;
-}
-
+// Hero
 .hero {
   display: flex;
   flex-direction: column;
@@ -106,10 +135,9 @@
 .story {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-block: map-get($map: $spacing, $key: '3xl');
+  background-color: map-get($map: $colors, $key: 'bg-light-blue');
 
   &__content {
-    margin-inline: map-get($map: $spacing, $key: '2xl');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,13 +145,79 @@
 
     &__title {
       text-transform: capitalize;
+      font-weight: bold;
     }
     &__description {
       font-weight: bolder;
-      font-size: map-get($map: $font-sizes, $key: '2xl');
+      font-size: map-get($map: $font-sizes, $key: 'xl');
     }
     .button {
-      margin-top: map-get($map: $spacing, $key: '3xl');
+      margin-top: map-get($map: $spacing, $key: '4xl');
+    }
+  }
+}
+
+.portfolio {
+  background-color: map-get($map: $colors, $key: 'bg-light-black');
+
+  &__description {
+    margin-bottom: map-get($map: $spacing, $key: 'xl');
+
+    &__headline {
+      max-width: 70%;
+      font-size: map-get($map: $font-sizes, $key: '4xl');
+      line-height: 1.25;
+      margin-bottom: map-get($map: $spacing, $key: 'xl');
+    }
+
+    &__deck {
+      max-width: 50%;
+      font-size: map-get($map: $font-sizes, $key: 'xl');
+      border-left: $border-thick;
+      margin-left: map-get($map: $spacing, $key: '3xl');
+      padding-left: map-get($map: $spacing, $key: 'lg');
+      padding-block: map-get($map: $spacing, $key: 'sm');
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: map-get($map: $spacing, $key: 'lg');
+
+    h2 {
+      font-size: map-get($map: $font-sizes, $key: '2xl');
+      text-transform: capitalize;
+      letter-spacing: map-get($map: $spacing, $key: '3xs');
+    }
+
+    a {
+      font-size: map-get($map: $font-sizes, $key: 'lg');
+      text-transform: uppercase;
+      letter-spacing: map-get($map: $spacing, $key: '3xs');
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: map-get($map: $spacing, $key: 'lg');
+
+    &__item {
+      a {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__artist {
+        color: map-get($map: $colors, $key: 'font-accent');
+        background-color: rgba(map-get($map: $colors, $key: 'bg-dark'), 0.8);
+        transform: translateY(-100%);
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

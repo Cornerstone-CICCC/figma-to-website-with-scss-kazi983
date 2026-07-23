@@ -63,10 +63,12 @@ ol {
 // Headings
 h1 {
   font-size: map-get($map: $font-sizes, $key: '6xl');
+  font-weight: inherit;
 }
 
 h2 {
   font-size: map-get($map: $font-sizes, $key: '5xl');
+  font-weight: inherit;
 }
 h3,
 h4,
