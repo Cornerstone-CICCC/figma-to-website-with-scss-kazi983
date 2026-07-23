@@ -56,9 +56,6 @@
   align-items: center;
   overflow: hidden;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
   background: {
     image: url(../images/hero-background.png);
     size: cover;
@@ -67,10 +64,6 @@
     color: map-get($map: $colors, $key: 'bg-base');
     color: rgba(255, 255, 255, 0.6);
     blend-mode: lighten;
-    // backdrop-filter: ; TODO
-    // }
-    // opacity: 0.1;
-    // z-index: 1;
   }
 
   &__content {
