@@ -1,7 +1,3 @@
-* {
-  outline: 1px solid red;
-}
-
 *,
 *::before,
 *::after {
@@ -191,7 +187,7 @@ h2 {
   font-size: 1.3rem;
 }
 .hero__scroll::before {
-  content: url("../images/arrow.svg");
+  content: url("../images/hero-arrow.svg");
   position: absolute;
   transform: translateY(110%) translateX(-5%);
 }
@@ -379,6 +375,51 @@ h2 {
 }
 .career__visual {
   mask-image: linear-gradient(transparent 0%, rgb(0, 0, 0) 20%);
+}
+
+.contact {
+  margin-inline: 5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40rem;
+}
+.contact p {
+  font-size: 2.4rem;
+  max-width: 13rem;
+  position: relative;
+  gap: 1.2rem;
+}
+.contact p::after {
+  content: url("../images/contact-arrow.svg");
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%) translateX(2rem);
+}
+.contact__link {
+  font-size: 6.3rem;
+  text-transform: initial;
+  flex-grow: 4;
+  display: inline-block;
+}
+.contact__link::after {
+  content: "";
+  display: block;
+  width: 120%;
+  border-bottom: 1px solid #000000;
+}
+.contact__button {
+  font-size: 4rem;
+  background-color: #000000;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__button img {
+  filter: brightness(0) invert(1);
 }
 
 /*# sourceMappingURL=styles.css.map */

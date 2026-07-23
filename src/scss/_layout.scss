@@ -134,7 +134,7 @@
     font-size: map-get($map: $font-sizes, $key: 'sm');
 
     &::before {
-      content: url('../images/arrow.svg');
+      content: url('../images/hero-arrow.svg');
       position: absolute;
       transform: translateY(110%) translateX(-5%);
     }
@@ -360,5 +360,59 @@
       }
     }
     mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 20%);
+  }
+}
+
+.contact {
+  margin-inline: map-get($map: $spacing, $key: 'xl');
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: map-get($map: $spacing, $key: '8xl');
+
+  p {
+    font-size: map-get($map: $font-sizes, $key: 'lg') * 1.2;
+    max-width: 13rem;
+
+    position: relative;
+
+    gap: 1.2rem;
+
+    &::after {
+      content: url('../images/contact-arrow.svg');
+      width: 100%;
+      position: absolute;
+      transform: translateY(-50%) translateX(2rem);
+    }
+  }
+
+  &__link {
+    font-size: map-get($map: $font-sizes, $key: '5xl') * 0.9;
+    text-transform: initial;
+    flex-grow: 4;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 120%;
+      border-bottom: $border-base;
+    }
+  }
+
+  &__button {
+    font-size: map-get($map: $font-sizes, $key: '2xl');
+    background-color: map-get($map: $colors, $key: 'font-base');
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 }
