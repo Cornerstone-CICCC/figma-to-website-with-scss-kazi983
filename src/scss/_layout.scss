@@ -205,6 +205,7 @@
       font-size: map-get($map: $font-sizes, $key: '2xl');
       text-transform: capitalize;
       letter-spacing: map-get($map: $spacing, $key: '3xs');
+      font-weight: inherit;
     }
 
     a {
@@ -241,7 +242,7 @@
 .uxspace {
   padding-left: map-get($map: $spacing, $key: '4xl');
   padding-right: map-get($map: $spacing, $key: '2xl');
-  padding-bottom: map-get($map: $spacing, $key: '5xl');
+  padding-bottom: map-get($map: $spacing, $key: '6xl');
   grid-template-columns: 5fr 4fr;
   display: grid;
 
@@ -264,10 +265,6 @@
     }
 
     &__title {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: map-get($map: $font-sizes, $key: '4xl');
-
       .highlight::after {
         border: $border-base;
       }
@@ -287,7 +284,7 @@
 // Event
 .event {
   padding-inline: map-get($map: $spacing, $key: '4xl');
-  padding-top: map-get($map: $spacing, $key: '5xl');
+  padding-top: map-get($map: $spacing, $key: '6xl');
   background-color: map-get($map: $colors, $key: 'bg-light-black');
 
   display: grid;
@@ -301,9 +298,6 @@
 
     h2 {
       max-width: 50rem;
-      text-transform: uppercase;
-      font-size: map-get($map: $font-sizes, $key: '4xl');
-      font-weight: bold;
     }
 
     p {
@@ -328,4 +322,43 @@
   }
 
   // TODO 縦幅が大きい。なぜ？
+}
+
+.career {
+  padding-inline: map-get($map: $spacing, $key: '3xl');
+
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+
+  &__content {
+    margin-left: map-get($map: $spacing, $key: '3xl');
+    margin-right: map-get($map: $spacing, $key: '5xl');
+    margin-top: map-get($map: $spacing, $key: '6xl');
+
+    h2 {
+      max-width: 40rem;
+    }
+    p {
+      margin-block: map-get($map: $spacing, $key: 'xl');
+      font-size: map-get($map: $font-sizes, $key: 'lg') * 1.2;
+    }
+  }
+
+  &__visual {
+    width: 85%;
+    margin-left: map-get($map: $spacing, $key: '3xl');
+    display: flex;
+    gap: map-get($map: $spacing, $key: 'md');
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: map-get($map: $spacing, $key: 'md');
+
+      :last-child {
+        mask-image: linear-gradient(rgba(0, 0, 0, 1) 50%, transparent 100%);
+      }
+    }
+    mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 20%);
+  }
 }

@@ -59,16 +59,9 @@ h1 {
 }
 
 h2 {
-  font-size: 7rem;
-  font-weight: inherit;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  line-height: 1.25;
 }
 
 .button {
@@ -207,7 +200,7 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #edf0f9;
-  padding-right: 18rem;
+  padding-right: 12.6rem;
 }
 .story__content {
   display: flex;
@@ -260,6 +253,7 @@ h6 {
   font-size: 4rem;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
+  font-weight: inherit;
 }
 .portfolio__title a {
   font-size: 2rem;
@@ -307,11 +301,6 @@ h6 {
   top: 0;
   left: 0;
 }
-.uxspace__content__title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 5.2rem;
-}
 .uxspace__content__title .highlight::after {
   border: 1px solid #000000;
 }
@@ -337,9 +326,6 @@ h6 {
 }
 .event__content h2 {
   max-width: 50rem;
-  text-transform: uppercase;
-  font-size: 5.2rem;
-  font-weight: bold;
 }
 .event__content p {
   margin-block: 5rem;
@@ -358,6 +344,41 @@ h6 {
 .event__visual__milano {
   position: relative;
   z-index: 2;
+}
+
+.career {
+  padding-inline: 8rem;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+}
+.career__content {
+  margin-left: 8rem;
+  margin-right: 14rem;
+  margin-top: 20rem;
+}
+.career__content h2 {
+  max-width: 40rem;
+}
+.career__content p {
+  margin-block: 5rem;
+  font-size: 2.4rem;
+}
+.career__visual {
+  width: 85%;
+  margin-left: 8rem;
+  display: flex;
+  gap: 1.6rem;
+}
+.career__visual__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.career__visual__column :last-child {
+  mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent 100%);
+}
+.career__visual {
+  mask-image: linear-gradient(transparent 0%, rgb(0, 0, 0) 20%);
 }
 
 /*# sourceMappingURL=styles.css.map */
