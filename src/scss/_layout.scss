@@ -38,6 +38,7 @@
 // Header
 .header {
   position: absolute;
+  z-index: 1;
   width: 100%;
 
   padding-right: map.get($map: $spacing, $key: '2xl');
@@ -47,10 +48,9 @@
   align-items: center;
 
   &__logo {
-    width: 20%;
+    padding: map.get($map: $spacing, $key: 'lg');
     img {
-      height: $header-height;
-      overflow: hidden;
+      height: $header-height * 0.5;
     }
   }
 
@@ -111,9 +111,7 @@
   }
 
   &__social {
-    position: absolute;
-    left: 2rem;
-    bottom: 10rem;
+    align-self: self-start;
 
     ul {
       display: flex;
@@ -125,17 +123,30 @@
       margin-bottom: map-get($map: $spacing, $key: 'xs');
     }
   }
+
+  position: relative;
   &__scroll {
     position: absolute;
     right: 1rem;
+    bottom: 10rem;
     writing-mode: sideways-lr;
+    text-transform: uppercase;
+    font-size: map-get($map: $font-sizes, $key: 'sm');
+
+    &::before {
+      content: url('../images/arrow.svg');
+      position: absolute;
+      transform: translateY(110%) translateX(-5%);
+    }
   }
 }
 
+// Story
 .story {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: map-get($map: $colors, $key: 'bg-light-blue');
+  padding-right: map-get($map: $spacing, $key: '5xl') * 0.9;
 
   &__content {
     display: flex;
@@ -148,12 +159,17 @@
     }
     &__description {
       margin-block: map-get($map: $spacing, $key: 'lg');
+      // margin-right: map-get($map: $spacing, $key: 'xl');
       font-weight: bolder;
       font-size: map-get($map: $font-sizes, $key: 'xl');
     }
     .button {
       margin-top: map-get($map: $spacing, $key: '4xl');
     }
+  }
+
+  &__visual {
+    transform: translateY(150px);
   }
 }
 

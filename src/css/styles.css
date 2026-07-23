@@ -116,6 +116,7 @@ h6 {
 
 .header {
   position: absolute;
+  z-index: 1;
   width: 100%;
   padding-right: 6rem;
   height: 12rem;
@@ -124,11 +125,10 @@ h6 {
   align-items: center;
 }
 .header__logo {
-  width: 20%;
+  padding: 2.5rem;
 }
 .header__logo img {
-  height: 12rem;
-  overflow: hidden;
+  height: 6rem;
 }
 .header__nav {
   font-size: 2.5rem;
@@ -175,9 +175,7 @@ h6 {
   letter-spacing: -2px;
 }
 .hero__social {
-  position: absolute;
-  left: 2rem;
-  bottom: 10rem;
+  align-self: self-start;
 }
 .hero__social ul {
   display: flex;
@@ -188,16 +186,28 @@ h6 {
 .hero__social__linkedin {
   margin-bottom: 0.4rem;
 }
+.hero {
+  position: relative;
+}
 .hero__scroll {
   position: absolute;
   right: 1rem;
+  bottom: 10rem;
   writing-mode: sideways-lr;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.hero__scroll::before {
+  content: url("../images/arrow.svg");
+  position: absolute;
+  transform: translateY(110%) translateX(-5%);
 }
 
 .story {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #edf0f9;
+  padding-right: 18rem;
 }
 .story__content {
   display: flex;
@@ -215,6 +225,9 @@ h6 {
 }
 .story__content .button {
   margin-top: 12rem;
+}
+.story__visual {
+  transform: translateY(150px);
 }
 
 .portfolio {
