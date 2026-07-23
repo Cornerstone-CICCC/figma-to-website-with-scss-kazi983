@@ -1,0 +1,136 @@
+@use 'variables' as *;
+@use 'sass:map';
+
+.header {
+  position: absolute;
+  width: 100%;
+
+  padding-right: map.get($spacing, '2xl');
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 20%;
+    img {
+      height: $header-height;
+      overflow: hidden;
+    }
+  }
+
+  &__nav {
+    font-size: map-get($map: $font-sizes, $key: '2xl');
+
+    ul {
+      width: 100%;
+      display: flex;
+      gap: map-get($map: $spacing, $key: 'xl');
+      letter-spacing: map-get($map: $spacing, $key: '2xs');
+    }
+
+    &__my-uxspace {
+      border-color: map-get($map: $colors, $key: 'border');
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: $shadow-light;
+      background-color: white;
+    }
+
+    &__events,
+    &__job-postings {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.section__main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  background: {
+    image: url(../images/hero-background.png);
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+    color: map-get($map: $colors, $key: 'bg-base');
+    color: rgba(255, 255, 255, 0.6);
+    blend-mode: lighten;
+    // backdrop-filter: ; TODO
+    // }
+    // opacity: 0.1;
+    // z-index: 1;
+  }
+
+  &__content {
+    height: 100%;
+    text-transform: uppercase;
+
+    &__title {
+      font-weight: 700;
+    }
+
+    &__description {
+      text-align: center;
+      font-size: map-get($map: $font-sizes, $key: '3xl');
+      letter-spacing: -2px;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    left: 2rem;
+    bottom: 10rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: map-get($map: $spacing, $key: 'lg');
+    }
+    &__linkedin {
+      margin-bottom: map-get($map: $spacing, $key: 'xs');
+    }
+  }
+  &__scroll {
+    position: absolute;
+    right: 1rem;
+    writing-mode: sideways-lr;
+  }
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block: map-get($map: $spacing, $key: '3xl');
+
+  &__content {
+    margin-inline: map-get($map: $spacing, $key: '2xl');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    &__title {
+      text-transform: capitalize;
+    }
+    &__description {
+      font-weight: bolder;
+      font-size: map-get($map: $font-sizes, $key: '2xl');
+    }
+    .button {
+      margin-top: map-get($map: $spacing, $key: '3xl');
+    }
+  }
+}

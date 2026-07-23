@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+// Color
+$colors: (
+  'bg-base': #f9f9fb,
+  'bg-light-blue': #def0f9,
+  'bg-light-dark': #cecece,
+  'bg-dark': #3d3d3d,
+
+  'accent': #3190e8,
+
+  'font-base': #000000,
+  'font-accent': #ffffff,
+
+  'border': #000000,
+);
+
+// Shadow
+$shadow-light: 0 4px 4px 0 #00000040;
+$shadow-dark: 0 4px 4px 0 #000000;
+
+// $main-color: map.get($colors, main);
+
+// Font sizes
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 2.5rem,
+  '3xl': 4.5rem,
+  '4xl': 8rem,
+  '5xl': 7rem,
+  '6xl': 12rem,
+);
+
+// Spacing
+$spacing: (
+  '2xs': 0.2rem,
+  'xs': 0.4rem,
+  'sm': 0.8rem,
+  'md': 1.6rem,
+  'lg': 2.5rem,
+  'xl': 5rem,
+  '2xl': 8rem,
+  '3xl': 12rem,
+);
+
+// Border radius
+$radius: (
+  'sm': 4px,
+  'md': 8px,
+  'lg': 16px,
+  'full': 9999px,
+);
+
+$header-height: 12rem;
