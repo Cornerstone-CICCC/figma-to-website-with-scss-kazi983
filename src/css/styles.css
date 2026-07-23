@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 *,
 *::before,
 *::after {
@@ -68,14 +72,14 @@ h6 {
 }
 
 .button {
-  min-width: 150px;
+  display: inline-block;
   background-color: #3190e8;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-block: 1.6rem;
-  padding-inline: 2.4rem;
+  padding-block: 0.8rem;
+  padding-inline: 2.5rem;
   border-radius: 5px;
   border: 1px solid #000000;
   box-shadow: 0 4px 4px 0 #000000;
@@ -198,7 +202,6 @@ h6 {
 .story__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
 }
 .story__content__title {
@@ -206,6 +209,7 @@ h6 {
   font-weight: bold;
 }
 .story__content__description {
+  margin-block: 2.5rem;
   font-weight: bolder;
   font-size: 2.5rem;
 }
@@ -265,6 +269,45 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.uxspace {
+  padding-left: 12rem;
+  padding-right: 6rem;
+  padding-bottom: 20rem;
+  grid-template-columns: 5fr 4fr;
+  display: grid;
+}
+.uxspace__content {
+  padding-left: 5rem;
+  padding-right: 6.6rem;
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+}
+.uxspace__content::before {
+  content: url("../images/uxspace-illustration..svg");
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+}
+.uxspace__content__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5.2rem;
+}
+.uxspace__content__title .highlight::after {
+  border: 1px solid #000000;
+}
+.uxspace__content p {
+  margin-block: 2.5rem;
+  font-size: 2.4rem;
+}
+.uxspace__content .button {
+  margin-top: 8rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

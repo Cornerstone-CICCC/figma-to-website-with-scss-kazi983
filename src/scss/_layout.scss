@@ -140,7 +140,6 @@
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
 
     &__title {
@@ -148,6 +147,7 @@
       font-weight: bold;
     }
     &__description {
+      margin-block: map-get($map: $spacing, $key: 'lg');
       font-weight: bolder;
       font-size: map-get($map: $font-sizes, $key: 'xl');
     }
@@ -218,6 +218,53 @@
         justify-content: center;
         align-items: center;
       }
+    }
+  }
+}
+
+// My UxSpace
+.uxspace {
+  padding-left: map-get($map: $spacing, $key: '4xl');
+  padding-right: map-get($map: $spacing, $key: '2xl');
+  padding-bottom: map-get($map: $spacing, $key: '5xl');
+  grid-template-columns: 5fr 4fr;
+  display: grid;
+
+  &__content {
+    padding-left: map-get($map: $spacing, $key: 'xl');
+    padding-right: map-get($map: $spacing, $key: '2xl') * 1.1;
+    padding-top: map-get($map: $spacing, $key: 'sm');
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    position: relative;
+    &::before {
+      content: url('../images/uxspace-illustration..svg');
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: map-get($map: $font-sizes, $key: '4xl');
+
+      .highlight::after {
+        border: $border-base;
+      }
+    }
+
+    p {
+      margin-block: map-get($map: $spacing, $key: 'lg');
+      font-size: map-get($map: $font-sizes, $key: 'lg') * 1.2;
+    }
+
+    .button {
+      margin-top: map-get($map: $spacing, $key: '3xl');
     }
   }
 }

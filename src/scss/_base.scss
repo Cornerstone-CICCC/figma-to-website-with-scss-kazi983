@@ -1,6 +1,11 @@
 @use 'variables' as *;
 @use 'sass:map';
 
+// For testing purpose
+* {
+  outline: 1px solid red;
+}
+
 // Box sizing reset
 *,
 *::before,
