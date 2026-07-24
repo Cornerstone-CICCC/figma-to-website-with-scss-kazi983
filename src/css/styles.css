@@ -379,13 +379,14 @@ h2 {
 
 .contact {
   margin-inline: 5rem;
+  padding-bottom: 8rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 40rem;
 }
 .contact p {
-  font-size: 2.4rem;
+  font-size: 3rem;
   max-width: 13rem;
   position: relative;
   gap: 1.2rem;
@@ -410,7 +411,7 @@ h2 {
 }
 .contact__button {
   font-size: 4rem;
-  background-color: #000000;
+  background-color: #3d3d3d;
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
@@ -420,6 +421,68 @@ h2 {
 }
 .contact__button img {
   filter: brightness(0) invert(1);
+}
+
+.footer {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  padding-inline: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  align-items: center;
+  column-gap: 12rem;
+  row-gap: 2.5rem;
+}
+.footer__title {
+  font-size: 5.72rem;
+}
+.footer__message {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  grid-column: 2/span 2;
+}
+.footer__news {
+  padding-right: 2.5rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  border-bottom: 1px solid #000000;
+  border-color: #cecece;
+}
+.footer__news::after {
+  content: url("../images/footer-arrow.svg");
+  width: 100%;
+  position: absolute;
+  transform: translateX(0.5rem);
+}
+.footer li a {
+  font-size: 2.2rem;
+}
+.footer__legal ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.footer__menu {
+  grid-column: 2/span 2;
+}
+.footer__menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+.footer__social ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+.footer__follow-us {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

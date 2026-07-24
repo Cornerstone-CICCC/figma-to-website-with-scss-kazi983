@@ -365,13 +365,14 @@
 
 .contact {
   margin-inline: map-get($map: $spacing, $key: 'xl');
+  padding-bottom: map-get($map: $spacing, $key: '3xl');
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: map-get($map: $spacing, $key: '8xl');
 
   p {
-    font-size: map-get($map: $font-sizes, $key: 'lg') * 1.2;
+    font-size: map-get($map: $font-sizes, $key: 'xl') * 1.2;
     max-width: 13rem;
 
     position: relative;
@@ -402,7 +403,7 @@
 
   &__button {
     font-size: map-get($map: $font-sizes, $key: '2xl');
-    background-color: map-get($map: $colors, $key: 'font-base');
+    background-color: map-get($map: $colors, $key: 'bg-dark');
     border-radius: 50%;
     width: 8rem;
     height: 8rem;
@@ -414,5 +415,79 @@
     img {
       filter: brightness(0) invert(1);
     }
+  }
+}
+
+.footer {
+  background-color: map-get($map: $colors, $key: 'bg-dark');
+  color: map-get($map: $colors, $key: 'font-accent');
+
+  padding-inline: map-get($map: $spacing, $key: '2xl');
+  padding-top: map-get($map: $spacing, $key: '2xl');
+  padding-bottom: map-get($map: $spacing, $key: '3xl');
+
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  align-items: center;
+  column-gap: map-get($map: $spacing, $key: '4xl');
+  row-gap: map-get($map: $spacing, $key: 'lg');
+
+  &__title {
+    font-size: map-get($map: $font-sizes, $key: '4xl') * 1.1;
+  }
+
+  &__message {
+    font-size: map-get($map: $font-sizes, $key: 'xl');
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-column: 2 / span 2;
+  }
+
+  &__news {
+    padding-right: map-get($map: $spacing, $key: 'lg');
+    text-transform: uppercase;
+    font-size: map-get($map: $font-sizes, $key: 'lg');
+    position: relative;
+    border-bottom: $border-base;
+    border-color: map-get($map: $colors, $key: 'bg-light-black');
+
+    &::after {
+      content: url('../images/footer-arrow.svg');
+      width: 100%;
+      position: absolute;
+      transform: translateX(0.5rem);
+    }
+  }
+
+  li a {
+    font-size: map-get($map: $font-sizes, $key: 'lg') * 1.1;
+  }
+
+  &__legal ul {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($map: $spacing, $key: 'md');
+  }
+
+  &__menu {
+    grid-column: 2 / span 2;
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: map-get($map: $spacing, $key: 'md');
+    }
+  }
+
+  &__social ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: map-get($map: $spacing, $key: 'md');
+  }
+
+  &__follow-us {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($map: $font-sizes, $key: 'lg');
   }
 }
