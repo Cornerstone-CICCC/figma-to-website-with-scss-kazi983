@@ -196,7 +196,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #edf0f9;
-  padding-right: 12.6rem;
+  padding-right: 13rem;
 }
 .story__content {
   display: flex;
@@ -216,7 +216,8 @@ h2 {
   margin-top: 12rem;
 }
 .story__visual {
-  transform: translateY(150px);
+  align-self: self-end;
+  margin-inline: 8rem;
 }
 
 .portfolio {
@@ -252,7 +253,7 @@ h2 {
   font-weight: inherit;
 }
 .portfolio__title a {
-  font-size: 2rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
@@ -283,7 +284,7 @@ h2 {
 }
 .uxspace__content {
   padding-left: 5rem;
-  padding-right: 6.6rem;
+  padding-right: 7rem;
   padding-top: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -311,6 +312,7 @@ h2 {
 .event {
   padding-inline: 12rem;
   padding-top: 20rem;
+  padding-bottom: 20rem;
   background-color: #cecece;
   display: grid;
   grid-template-columns: 5fr 6fr;
@@ -334,7 +336,7 @@ h2 {
 }
 .event__visual__roma {
   transform: translateX(80%) translateY(-85%);
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 .event__visual__milano {
@@ -436,10 +438,10 @@ h2 {
   row-gap: 2.5rem;
 }
 .footer__title {
-  font-size: 5.72rem;
+  font-size: 6.3rem;
 }
 .footer__message {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: bold;
   grid-column: 2/span 2;
@@ -447,19 +449,18 @@ h2 {
 .footer__news {
   padding-right: 2.5rem;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: relative;
   border-bottom: 1px solid #000000;
   border-color: #cecece;
 }
 .footer__news::after {
   content: url("../images/footer-arrow.svg");
-  width: 100%;
   position: absolute;
   transform: translateX(0.5rem);
 }
 .footer li a {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 .footer__legal ul {
   display: flex;
@@ -481,8 +482,8 @@ h2 {
 }
 .footer__follow-us {
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

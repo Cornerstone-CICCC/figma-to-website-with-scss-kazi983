@@ -67,12 +67,12 @@ ol {
 
 // Headings
 h1 {
-  font-size: map-get($map: $font-sizes, $key: '6xl');
+  font-size: map-get($map: $font-sizes, $key: '8xl');
   font-weight: inherit;
 }
 
 h2 {
-  font-size: map-get($map: $font-sizes, $key: '4xl');
+  font-size: map-get($map: $font-sizes, $key: '5xl');
   text-transform: uppercase;
   line-height: 1.25;
 }
