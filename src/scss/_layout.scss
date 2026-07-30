@@ -8,8 +8,6 @@
 
   padding-block: map-get($map: $spacing, $key: '5xl');
   padding-inline: map-get($map: $spacing, $key: '2xl');
-  // paddingは要素の内側の余白
-  // margin はsectionと外側との距離 -> sectionタグにmarginがついてるのは変。
 }
 
 // Highlight
@@ -111,7 +109,10 @@
   }
 
   &__social {
-    align-self: self-start;
+    position: absolute;
+
+    left: map-get($map: $spacing, $key: 'lg');
+    bottom: map-get($map: $spacing, $key: '4xl');
 
     ul {
       display: flex;

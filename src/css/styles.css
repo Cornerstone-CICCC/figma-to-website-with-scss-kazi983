@@ -164,7 +164,9 @@ h2 {
   letter-spacing: -2px;
 }
 .hero__social {
-  align-self: self-start;
+  position: absolute;
+  left: 2.5rem;
+  bottom: 8rem;
 }
 .hero__social ul {
   display: flex;
